@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Food App</h1>
-</body>
-</html>
+{% for item in item_list %}
+    <a href="{% url 'food:detail' item.id %}">
+        {{ item.id }} -- {{ item.item_name }}
+    </a>
+{% endfor %}
