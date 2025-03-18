@@ -1,2 +1,13 @@
-<h1>{{item.item_name}} - ${{ item.item_price }}</h1>
-<p>{{item.item_description}}</p>
+{% extends "food/base.html" %}
+{% block body %}
+<div class="row">
+    <div class="col-md-6">
+        <img width="300px" src="{{item.item_image}}" alt="{{item.item_name}}">
+    </div>
+    <div class="col-md-6">
+        <h3>{{item.item_name}}</h3>
+        <h5>{{item.item_description}}</h5>
+        <h6>${{item.item_price}}</h6>
+    </div>
+</div>
+{% endblock %}
