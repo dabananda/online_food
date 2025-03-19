@@ -2,10 +2,10 @@
 {% block body %}
 <div class="card p-3 w-50 mx-auto">
     <div class="card-body">
-        <form method="POST" class="form">
+        <form class="form" method="post">
             {% csrf_token %}
-            {{form}}
-            <button type="submit" class="btn btn-success mt-3">Save</button>
+            {{ form }}
+            <button class="btn btn-success mt-3" type="submit">Signup</button>
         </form>
     </div>
 </div>
