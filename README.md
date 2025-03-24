@@ -4,7 +4,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/online_food.git
+   git clone https://github.com/dabananda/online_food.git
    cd repository-name
    ```
 
