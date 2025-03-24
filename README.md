@@ -5,7 +5,7 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/dabananda/online_food.git
-   cd repository-name
+   cd online_food
    ```
 
 2. Set up a virtual environment:
