@@ -4,8 +4,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+   git clone https://github.com/dabananda/online_food.git
+   cd online_food
    ```
 
 2. Set up a virtual environment:
