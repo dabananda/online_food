@@ -3,6 +3,7 @@ from food.models import Item
 from food.forms import ItemForm
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
 
 
 class IndexClassView(ListView):
@@ -28,6 +29,16 @@ def create_item(request):
     }
 
     return render(request, 'food/item_form.html', context)
+
+
+class CreateItem(CreateView):
+    model = Item
+    fields = ['item_name', 'item_description', 'item_price', 'item_image']
+    template_name = 'food/item_form.html'
+
+    def form_valid(self, form):
+        form.instance.user_name = self.request.user
+        return super().form_valid(form)
 
 
 def update_item(request, item_id):

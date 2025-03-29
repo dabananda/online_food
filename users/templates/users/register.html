@@ -1,10 +1,16 @@
 {% extends "food/base.html" %}
 {% block body %}
-<div class="card p-3 w-50 mx-auto">
+<div class="card w-50 mx-auto">
+    <div class="card-header">Registration</div>
     <div class="card-body">
         <form class="form" method="post">
             {% csrf_token %}
-            {{ form }}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.name }}
+                    {{ field }}
+                </div>
+            {% endfor %}
             <button class="btn btn-success mt-3" type="submit">Signup</button>
         </form>
     </div>
